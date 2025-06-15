@@ -9,10 +9,11 @@ export default function CartList() {
 
   // console.log(cartItems);
   return (
-    <div className="max-w-5xl   mx-auto max-md:max-w-xl py-4">
-      <h1 className="text-2xl  font-bold dark: text-stone-50  text-center">
-        Cart Page
+    <div className="max-w-5xl bg-white  mx-auto max-md:max-w-xl py-4">
+      <h1 className="text-3xl text-black text-center mb-4 font-bold">
+        Shopping List App
       </h1>
+      <h2 className="text-2xl  font-bold text-black  text-center">Cart Page</h2>
       <div className="grid md:grid-cols-3 gap-8 mt-12">
         <div className="md:col-span-2 space-y-4">
           {cartItems?.length ? (

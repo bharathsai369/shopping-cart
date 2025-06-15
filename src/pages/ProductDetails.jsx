@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { ShoppingCartContext } from "../CartContextProvider";
 
 export default function ProductDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const {
     productDetails,
     setProductDetails,
@@ -32,7 +33,14 @@ export default function ProductDetails() {
 
   return (
     <div>
-      <div className="p-6 lg:max-w-7xl dark:bg-white max-w-4xl mx-auto">
+      <div className="p-6 lg:max-w-7xl bg-white max-w-4xl mx-auto">
+        <h1 className="text-3xl text-black text-center mb-4 font-bold">
+          Shopping List App
+        </h1>
+        <h2 className="text-2xl  font-bold text-black  text-center">
+          Product Details Page
+        </h2>
+
         <div className="grid items-center grid-cols-1 lg:grid-cols-5 gap-12 shadow-sm p-6">
           <div className="lg:col-span-3 w-full lg:sticky top-0 text-center">
             <div className="px-4 py-10 rounded-xl shadow-lg relative">
@@ -63,7 +71,7 @@ export default function ProductDetails() {
             <div className="flex flex-wrap gap-4 mt-4">
               <p className="text-xl font-bold">${productDetails?.price}</p>
             </div>
-            <div>
+            <div className="flex flex-col">
               <button
                 disabled={
                   productDetails
@@ -76,6 +84,12 @@ export default function ProductDetails() {
                 className="disabled:opacity-65 mt-5 min-w-[200px] px-4 py-3 border border-[#333] bg-transparent text-sm font-semibold rounded"
               >
                 Add to Cart
+              </button>
+              <button
+                onClick={() => navigate("/products")}
+                className=" mt-5 ml-2 min-w-[200px] px-4 py-3 border border-[#333] bg-transparent text-sm font-semibold rounded cursor-pointer hover:underline"
+              >
+                Go To Products
               </button>
             </div>
           </div>

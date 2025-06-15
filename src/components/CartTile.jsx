@@ -16,7 +16,7 @@ export default function CartTile({ singleCartItem }) {
             />
           </div>
           <div>
-            <h3 className="text-base font-bold dark:text-white">
+            <h3 className="text-base font-bold text-black">
               {singleCartItem?.title}
             </h3>
             <button
@@ -28,10 +28,10 @@ export default function CartTile({ singleCartItem }) {
           </div>
         </div>
         <div className="ml-auto">
-          <h3 className="text-lg font-bold ">
+          <h3 className="text-lg text-black font-bold ">
             ${singleCartItem?.totalPrice.toFixed(2)}
           </h3>
-          <p className="mt-2 mb-3 font-bolf text-[16px]">
+          <p className="mt-2 mb-3 text-black font-bolf text-[16px]">
             Quantity: {singleCartItem?.quantity}
           </p>
           <div className="mt-3">
@@ -44,7 +44,7 @@ export default function CartTile({ singleCartItem }) {
             </button>
             <button
               onClick={() => handleAddToCart(singleCartItem)}
-              className="border border-[#000]"
+              className="border ml-2 border-[#000]"
             >
               +
             </button>
