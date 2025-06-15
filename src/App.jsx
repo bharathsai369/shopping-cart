@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
-      <h1 style={{ color: "white" }}>hey</h1>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductList />} />
