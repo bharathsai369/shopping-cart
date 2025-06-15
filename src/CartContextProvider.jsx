@@ -76,8 +76,24 @@ export default function CartContextProvider({ children }) {
 
   useEffect(() => {
     fetchListOfProducts();
-    setCartItems(JSON.parse(localStorage.getItem("cartItems") || []));
+
+    if (typeof window !== "undefined") {
+      try {
+        const storedCart = localStorage.getItem("cartItems");
+        if (storedCart) {
+          setCartItems(JSON.parse(storedCart));
+        }
+      } catch (e) {
+        console.error("Could not parse cartItems from localStorage:", e);
+        setCartItems([]);
+      }
+    }
   }, []);
+
+  // useEffect(() => {
+  //   fetchListOfProducts();
+  //   setCartItems(JSON.parse(localStorage.getItem("cartItems") || []));
+  // }, []);
 
   // console.log(cartItems);
   // console.log(listOfProducts);
