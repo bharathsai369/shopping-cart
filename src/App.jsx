@@ -5,6 +5,7 @@ import CartList from "./pages/CartList";
 import Home from "./pages/Home";
 
 function App() {
+  console.log("is there some problem up here?");
   return (
     <>
       <Routes>
