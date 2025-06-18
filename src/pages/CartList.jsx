@@ -42,13 +42,13 @@ export default function CartList() {
           <div className="mt-5 flex gap-2">
             <button
               disabled={cartItems.length === 0}
-              className="disabled:opacity-60 text-sm px-4 py-3 bg-black text-white font-extrabold"
+              className="disabled:opacity-60 text-sm px-4 py-3 bg-transparent font-extrabold"
             >
               Checkout
             </button>
             <button
               onClick={() => navigate("/products")}
-              className="text-sm px-4 py-3 bg-black text-white font-extrabold"
+              className="text-sm px-4 py-3 bg-transparent font-extrabold"
             >
               Continue Shopping
             </button>

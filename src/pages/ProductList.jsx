@@ -11,7 +11,7 @@ export default function ProductList() {
   return (
     <>
       {/* <h2>ProductList</h2> */}
-      <section className="py-12 dark: bg-white sm:py-16 lg:py-20 text-black">
+      <section className="py-12  bg-white sm:py-16 lg:py-20 text-black">
         <h1 className="text-3xl text-black text-center mb-4 font-bold">
           Shopping List App
         </h1>

@@ -21,7 +21,7 @@ export default function CartTile({ singleCartItem }) {
             </h3>
             <button
               onClick={() => handleRemoveFromCart(singleCartItem, true)}
-              className="text-sm px-4 py-3 bg-black text-white font-extrabold"
+              className="text-sm px-4 py-3 mt-2 bg-transparent font-extrabold"
             >
               REMOVE
             </button>

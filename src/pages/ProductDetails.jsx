@@ -69,7 +69,7 @@ export default function ProductDetails() {
               {productDetails?.title}
             </h2>
             <div className="flex flex-wrap gap-4 mt-4">
-              <p className="text-xl font-bold">${productDetails?.price}</p>
+              <p className="text-xl font-bold text-[#333]">${productDetails?.price}</p>
             </div>
             <div className="flex flex-col">
               <button

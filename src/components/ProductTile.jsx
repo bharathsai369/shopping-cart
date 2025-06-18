@@ -24,7 +24,7 @@ export default function ProductTile({ product }) {
             {product?.title}
           </p>
         </div>
-        s
+
         <div className="text-right">
           <p className="text-xs font-bold text-gray-900 sm:text-sm md:text-[14px]">
             ${product?.price}
@@ -33,14 +33,14 @@ export default function ProductTile({ product }) {
       </div>
       <button
         onClick={() => handleNavigateToProductDetailsPage(product?.id)}
-        className="px-5 mt-5 w-full py-2 rounded-none bg-black text-white font-bold text-lg"
+        className="px-5 mt-5 w-full py-2 rounded-none bg-transparent dark:text-white font-bold text-lg"
       >
         View Details
       </button>
       <button
         disabled={cartItems.findIndex((item) => item.id === product.id) > -1}
         onClick={() => handleAddToCart(product)}
-        className="disabled:opacity-65 px-5 mt-5 w-full py-2 rounded-none bg-black text-white font-bold text-lg"
+        className="disabled:opacity-65 px-5 mt-5 w-full py-2 rounded-none bg-transparent dark:text-white font-bold text-lg"
       >
         Add To Cart
       </button>
